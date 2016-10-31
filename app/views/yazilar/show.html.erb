@@ -1,0 +1,5 @@
+<h1><%=@yazi.title%></h1>
+<%=link_to "Edit", edit_yazi_path(@yazi)%>
+<%=link_to "Delete", destroy_yazi_path(@yazi)%>
+<p><%=@yazi.content%></p>
+<em><%=@yazi.created_at%></em>

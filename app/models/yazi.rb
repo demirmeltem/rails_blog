@@ -1,0 +1,2 @@
+class Yazi < ApplicationRecord
+end

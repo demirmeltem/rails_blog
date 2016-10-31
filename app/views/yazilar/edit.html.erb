@@ -1,0 +1,17 @@
+<%= form_for @edit_yazi, url: {action: "update"} do |y| %>
+   <div class="field">
+     <%= y.label :title %><br>
+     <%= y.text_field :title %> <br>
+     
+   </div>
+
+   <div class="field">
+     <%= y.label :content %><br>
+     <%= y.text_area :content %> <br>
+     
+   </div>
+
+   <div class="actions">
+     <%= y.submit "Update" %>
+   </div>
+<% end %>
