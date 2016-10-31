@@ -17,10 +17,10 @@ class YazilarController < ApplicationController
 		end
 
 	end
-	def edit
+	def edit #Template
 		@edit_yazi = Yazi.find(params[:id])
 	end
-	def update
+	def update #asıl iş
 		@yazi = Yazi.find(params[:id])
 		if @yazi.update_attributes(edit_yazi_params)
 			redirect_to(:action => 'show', :id => @yazi.id)	
