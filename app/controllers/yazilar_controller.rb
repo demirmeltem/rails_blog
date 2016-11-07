@@ -1,4 +1,5 @@
 class YazilarController < ApplicationController
+	before_action :require_user, only: [:new, :edit] #kontrol ediyor
 	def index
 		@yazilar = Yazi.all
 	end

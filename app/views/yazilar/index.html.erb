@@ -5,6 +5,7 @@
 |
 <%=link_to "Yeni Yazı", "/yazi/new"%>
 
+
 <% @yazilar.each do |yazi|%>
 	<h2> <%=yazi.title%></h2>
 	<p> <%=yazi.content%></p> <%=link_to "Read more", yazi_path(yazi)%><br>

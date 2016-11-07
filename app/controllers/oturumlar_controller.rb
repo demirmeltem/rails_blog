@@ -3,6 +3,11 @@ class OturumlarController < ApplicationController
 
 	end
 
+	def destroy 
+	  session[:user_id] = nil 
+	  redirect_to '/' 
+	end
+
 	def create
 	  @user = Kullanici.find_by_email(params[:oturum][:email])
 	  if @user && @user.authenticate(params[:oturum][:password])

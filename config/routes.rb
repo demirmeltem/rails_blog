@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
 	get '/girisyap' => 'oturumlar#new', as: :login
 	post '/girisyap' => 'oturumlar#create'
+
+	delete '/cikisyap' => 'oturumlar#destroy', as: :logout
 end

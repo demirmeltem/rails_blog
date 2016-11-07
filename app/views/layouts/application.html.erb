@@ -8,6 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+   <% if current_user %> 
+  <ul> 
+    <li><%= link_to "#{current_user.first_name} #{current_user.last_name}", "#" %></li> 
+    <li><%= link_to "Çıkış yap", logout_path, method: "delete" %></li> 
+  </ul> 
+<% else %> 
+  <ul> 
+    <li><%= link_to "Login", login_path %></a></li> 
+    <li><%= link_to "Signup", logout_path %></a></li> 
+  </ul> 
+<% end %>
+
   <body>
     <%= yield %>
   </body>
